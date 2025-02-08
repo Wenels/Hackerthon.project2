@@ -1,0 +1,644 @@
+/* Smooth fade-in animation for the whole page */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  background-color: #0daa97;
+  animation: fadeIn 1s ease-in-out; /* Page fade-in effect */
+}
+
+/* Container animation with shadow */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: slideIn 1s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  padding: 20px;
+  background: rgb(2, 174, 168);
+  border-radius: 10px;
+}
+
+/* Shared animation, shadow, and hover effect for elements */
+.peter, .ali, .lev {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow */
+  padding: 15px;
+  background: rgb(87, 196, 247);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect to enhance interactivity */
+.peter:hover, .ali:hover, .lev:hover, .container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+
+/* Hover effect for interactive feel */
+.peter:hover, .ali:hover, .lev:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+  .sam {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Hover effect */
+.sam:hover {
+    transform: scale(1.02); /* Slightly enlarges the element */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+
+
+
+  
+  /* Header */
+  header {
+    background-color: #FF3B3B;
+    color: #FFFFFF;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Hero Section with Glassmorphism Card */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF3B3B, #FF6B6B);
+  padding: 20px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-side img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text-side {
+  flex: 1;
+  color: #FFFFFF;
+}
+
+.text-side h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-side p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.cta-side {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cta-button {
+  background-color: #FFD700;
+  color: #333333;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FFC700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-side img {
+    max-width: 100%;
+  }
+
+  .text-side h2 {
+    font-size: 2rem;
+  }
+
+  .text-side p {
+    font-size: 1rem;
+  }
+}
+  
+  /* About Section */
+  .about {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    padding: 60px 0;
+    background-color: #FFFFFF;
+    text-align: center;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  
+  .step {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Donate Section */
+  .donate {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .donate h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .donate p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  footer a {
+    color: #FFD700;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+
+#box{
+  border:1px solid;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  display: flex; /* Flexbox is applied here */ 
+  justify-content: center; /* This arranges the inner boxes horizontally with space between */
+  align-items: center; 
+  text-align: center;
+  background-color: aqua;
+}
+
+#box1{
+  border:1px solid;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(0, 225, 255);
+}
+
+
+#box1 img{
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+
+}
+#box2{
+  border:1px solid;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(0, 225, 255);
+}
+
+#box2 img{
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+
+}
+
+
+
+
+
+#box3{
+  border:1px solid;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(0, 225, 255);
+}
+
+
+#box3 img{
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+
+}
+
+
+
+#box4{
+  border:1px solid;
+  border-radius: 10px;
+  width: 500px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(0, 225, 255);
+}
+
+
+#box4 img{
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+
+
+}
+
+
+
+#outerbox{
+
+  border: 0px;
+  border-radius: 0px;
+  width: 1820px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+#innerbox{
+  border:1px solid;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(0, 225, 255);
+}
+
+
+
+#outerbox1{
+
+  border: 0px;
+  border-radius: 0px;
+  width: 1820px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+
+#innerbox1{
+  border:1px solid;
+  border-radius: 5px;
+  width: 300px;
+  height: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(0, 225, 255);
+}
+
+.text{
+  z-index: 2; /* Place text above the overlay */
+  position: relative; /* Position text relative to the overlay */
+}
+
+
+
+/* -------------------------------------------  ABOUT US SECTION --------------------------------------- */
+/* General Styles */
+.about {
+  padding: 80px 0;
+  background-color: #f79797;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* First Row */
+.first_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  /* justify-content: space-between;
+  height: 300px; /* Fixed height for the first row */ 
+  margin-bottom: 60px; 
+  background-color: #F5F5F5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background: rgba(58, 42, 42, 0.1);
+  backdrop-filter: blur(50px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.about-header {
+  flex: 1;
+  max-width: 60%;
+}
+
+.about-header h2 {
+  font-family: 'Luckiest Guy', cursive; /* Playful font */
+  font-size: 3rem;
+  color: #FF3B3B;
+  margin-bottom: 10px;
+}
+.about-header p {
+  font-size: 1.2rem;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.circle-image {
+  flex: 0 0 250px; /* Fixed size for the circle */
+  margin-left: auto;
+
+}
+
+.circle-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* Ensure the image fills the circle */
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Second Row */
+.second-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background-color: #F5F5F5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  /* height: 480px; */
+  /* height: 660px; */
+}
+
+.more-text {
+  flex: 1;
+  padding: 30px;
+  /border-radius: 20px; / Rounded corners */
+  height: 400px;
+}
+
+.more-text h3 {
+  font-size: 2rem;
+  color: #333333;
+  margin-bottom: 15px;
+}
+
+.more-text p {
+  font-size: 1.1rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .first-row {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 20px;
+    
+  }
+
+  .about-header {
+    max-width: 100%;
+  }
+
+  .circle-image {
+    flex: 0 0 200px;
+    height: 200px;
+  }
+
+  .second-row {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  .more-text {
+    padding: 20px;
+  }
+
+  .about-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-header p {
+    font-size: 1rem;
+  }
+
+  .more-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .more-text p {
+    font-size: 1rem;
+  }
+}
